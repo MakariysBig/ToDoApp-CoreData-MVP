@@ -17,11 +17,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let windowScene = scene as? UIWindowScene {
 
             let window = UIWindow(windowScene: windowScene)
+<<<<<<< HEAD:ToDoApp/SceneDelegate.swift
+            let navController = UINavigationController()
+            
+            let presenter = MainPresenter()
+            let viewController = MainViewController(presenter: presenter)
+            presenter.viewDelegate = viewController 
+=======
             
             let navController = UINavigationController()
             let presenter = MainPresenter()
             let viewController = MainViewController(presenter: presenter)
             presenter.viewDelegate = viewController
+>>>>>>> main:ToDoApp/Other/SceneDelegate.swift
 
             navController.viewControllers = [viewController]
             window.rootViewController = navController
